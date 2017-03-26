@@ -1,15 +1,16 @@
 # coding:utf-8
 from django.shortcuts import redirect
 from django.contrib.auth import login
-from django.contrib.auth.forms import AuthenticationForm
 from django.views.generic import FormView
+
+from authissue.forms import AuthForm
 
 
 class AuthView(FormView):
     """
     """
     template_name = "auth/auth.html"
-    form_class = AuthenticationForm
+    form_class = AuthForm
 
     def form_valid(self, form):
         """

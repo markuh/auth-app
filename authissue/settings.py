@@ -31,6 +31,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTHENTICATION_BACKENDS = [
+    'authissue.backends.EmailBackend',
+]
+
 
 # Application definition
 
